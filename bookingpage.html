@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Travel Booking System</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="#">Travel and Tourism</a>
+        </div>
+
+        <div class="header-links">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#Services">About</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" id="loginBtn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="slider">
+            <img src="C:\Users\user\Documents\ban2.jpg" alt="Banner 2">
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service">
+<p>When booking travel, consider services that provide a user-friendly interface, transparent pricing, a wide range of accommodation options, and reliable customer support.</p>
+<p>Look for platforms that offer reviews and ratings to ensure you make informed decisions about your travel arrangements.</p>
+            <img src="C:\Users\user\Documents\ser1.jpg" alt="Service 1">
+
+            <h3>Flight Booking</h3>
+            <p>When navigating a flight booking system, it's crucial to opt for platforms that streamline the process, offering a seamless interface for searching, comparing, and booking flights.</p>
+<p> Look for services that display comprehensive flight information, including layovers, durations, and airline options, allowing you to make choices tailored to your preferences.</p>
+<p> Additionally, consider platforms that provide transparent pricing, highlighting any additional fees upfront.</p>
+<p> A user-friendly interface, coupled with detailed flight data, enhances the overall booking experience, making it easier to plan and enjoy your journey.</p>
+        </div>
+    </section>
+
+    <section class="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destination">
+            <img src="C:\Users\user\Documents\des3.jpg" alt="Destination 1">
+            <img src="C:\Users\user\Documents\des1.jpg"alt="Destination 1">
+            <img src="C:\Users\user\Documents\des2.jpg" alt="Destination 1">
+            
+        </div>
+        
+    </section>
+    <section class="booking-form">
+        <h2>Book Your Trip</h2>
+        <form>
+            <label for="destination">Select Destination:</label>
+            <select id="destination" name="destination">
+                <option value="	JAPAN">JAPAN</option>
+                <option value="KOREA">KOREA</option>
+                <option value="TOKYO">TOKYO</option>
+            </select>
+            <label for="departure-date">Departure Date:</label>
+            <input type="date" id="departure-date" name="departure-date">
+            <label for="return-date">Return Date:</label>
+            <input type="date" id="return-date" name="return-date">
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+    <footer>
+        <div class="contact">
+            <h4>Contact Us</h4>
+            <p>Email: miriyala@mytravelagency.com</p>
+            <p>Phone: 1-800-123-4567</p>
+        </div>
+        
+    </footer>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+body {
+    font-family: 'Your Desired Font', sans-serif; /* Replace 'Your Desired Font' with the actual font name */
+}
+.banner img {
+    width: 80%;
+    border-radius: 30px; /* Adjust the value to control the roundness of the corners */
+}
+.services img {
+    width: 30%;
+    border-radius: 30px; /* Adjust the value to control the roundness of the corners */
+}
+.destinations img {
+    width: 30%;
+    border-radius: 30px; /* Adjust the value to control the roundness of the corners */
+}
+
+    /* Existing styles */
+    body {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ3OPzbY23HPMEWg2WjCecZFNanY8NDWXxSg&usqp=CAU);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .logo a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .header-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .header-links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+    }
+
+    .header-links li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .booking-form {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .booking-form form {
+        display: grid;
+        gap: 10px;
+    }
+
+    .booking-form label, .booking-form input, .booking-form select {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .booking-form button {
+        padding: 10px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Modal styles */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+</style>
+<script>
+    function openModal() {
+        document.getElementById('loginModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('loginModal').style.display = 'none';
+    }
+
+    document.getElementById('loginBtn').addEventListener('click', openModal);
+</script>
+</body>
+</html>
